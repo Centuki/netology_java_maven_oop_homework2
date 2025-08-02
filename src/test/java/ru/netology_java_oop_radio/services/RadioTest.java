@@ -190,4 +190,23 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void shouldSetSizeRadio() {
+        Radio radio = new Radio(5);
+
+        int expected = 4;
+        int actual = radio.getMaxRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotSetSizeRadio(){
+        Radio radio = new Radio(-1);
+
+        int expected = 0;
+        int actual = radio.getMaxRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
